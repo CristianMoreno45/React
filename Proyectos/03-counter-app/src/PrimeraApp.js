@@ -16,8 +16,8 @@ const PrimeraAPP = ({ saludo, subtitulo }) => {
         // </Fragment>
         // Modo 3: envolver en un fragmento sin envolverlo en Div y sin importar Fragment de 'react'
         <>
-            <h1> {saludo} </h1>
-            <p> {subtitulo} </p>
+            <h1>{saludo}</h1>
+            <p>{subtitulo}</p>
         </>
 
 
