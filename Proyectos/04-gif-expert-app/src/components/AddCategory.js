@@ -5,17 +5,21 @@ export const AddCategory = ({ setCategories }) => {
     const [inputValue, setInputValue] = useState('');
     const inputHandler = (e) => {
         setInputValue(e.target.value);
+        console.log('Esto es un log en inputHandler');
     };
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(inputValue.trim().length > 2){
-            setCategories(categories => [ inputValue, ...categories]);
+        console.log('Esto es un log en handleSubmit');
+        if (inputValue.trim().length > 2) {
+            setCategories(categories => [inputValue, ...categories]);
             setInputValue('');
         }
+
     };
 
     return (
         <form onSubmit={handleSubmit}>
+            <p>{inputValue}</p>
             <input
                 type="text"
                 value={inputValue}
